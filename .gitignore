@@ -1,0 +1,24 @@
+# 🏗️ Fichiers compilés
+/bin/
+/*.class
+
+# 🧪 Fichiers temporaires SQLite
+*.db-journal
+
+# ⚠️ Facultatif : ignore la base de données locale si elle est recréée ou utilisée en test uniquement
+database/database.db
+
+# 💻 Fichiers IDE (à ignorer si tu es seul ou ne veux pas partager la config)
+.vscode/
+.idea/
+
+# 📦 Fichiers générés manuellement
+JeuVideoApp.jar
+manifest.txt
+
+# 📚 Bibliothèques locales
+lib/sqlite-jdbc-*.jar
+
+# 🗂 Système
+.DS_Store
+Thumbs.db
