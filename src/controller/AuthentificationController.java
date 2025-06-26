@@ -27,7 +27,7 @@ public class AuthentificationController {
         String email = scanner.nextLine();
         System.out.print("Mot de passe : ");
         String mdp = scanner.nextLine();
-        boolean ok = userService.createUtilisateur(pseudo, email, SecurityUtils.hashPassword(mdp));
+        boolean ok = userService.createUtilisateur(pseudo, email, mdp);
         System.out.println(ok ? "Utilisateur créé !" : "Erreur lors de la création.");
     }
 
