@@ -84,7 +84,6 @@ public class EvaluationService {
             int userId = rs.getInt("utilisateur_id");
             String pseudo = utilisateurService.getPseudoById(userId);
             int note = rs.getInt("note");
-            String date = rs.getString("date_evaluation");
 
             System.out.println("- " + pseudo + " : " + note + "/5 ");
         }
