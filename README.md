@@ -90,6 +90,7 @@ javac -cp "lib/sqlite-jdbc-3.50.1.0.jar" -d bin (Get-ChildItem -Recurse -Filter 
 ```
 Main-Class: src.Main
 Class-Path: lib/sqlite-jdbc-3.50.1.0.jar
+
 ```
 
 **📝 Important :** laisse une ligne vide à la fin du fichier.
