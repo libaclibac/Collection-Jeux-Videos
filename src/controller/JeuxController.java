@@ -46,7 +46,14 @@ public class JeuxController {
             System.out.println("Jeu non trouvé.");
             return;
         }
-        System.out.printf("🎮 %s | %s | %s\n", jeu.getTitre(), jeu.getGenre(), jeu.getPlateforme());
+        System.out.println("===== Détails du jeu =====");
+        System.out.println("Titre : " + jeu.getTitre());
+        System.out.println("Description : " + jeu.getDescription());
+        System.out.println("Genre : " + jeu.getGenre());
+        System.out.println("Plateforme : " + jeu.getPlateforme());
+        System.out.println("Date de sortie : " + jeu.getDateSortie());
+        System.out.println("Éditeur : " + jeu.getEditeur());
+        System.out.println("Créé par : " + jeu.getCreateurId());
 
         boolean sousMenuActif = true;
         while (sousMenuActif) {
