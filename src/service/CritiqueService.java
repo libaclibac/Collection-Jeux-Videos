@@ -49,4 +49,25 @@ public class CritiqueService {
         }
     }
 
+    public void listerCritiquesParJeu(int jeuId) {
+        String sql = "SELECT * FROM critiques WHERE jeu_id = ?";
+        UtilisateurService utilisateurService = new UtilisateurService();
+
+        try (Connection conn = DatabaseManager.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, jeuId);
+            var rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                int userId = rs.getInt("utilisateur_id");
+                String pseudo = utilisateurService.getPseudoById(userId);
+                String texte = rs.getString("texte");
+                System.out.println("- " + pseudo + " : " + texte);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Erreur lors de la récupération des critiques : " + e.getMessage());
+        }
+    }
 }

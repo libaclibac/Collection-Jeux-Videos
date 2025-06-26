@@ -31,7 +31,7 @@ public class JeuxController {
     public void afficherListeSouhaits(ListeDeSouhaitsService service, Utilisateur utilisateurConnecte) {
         var jeux = service.listerTitresSouhaitsUtilisateur(utilisateurConnecte.getId());
         if (jeux.isEmpty()) System.out.println("Aucun jeu dans votre liste.");
-        else jeux.forEach(titre -> System.out.println("⭐ " + titre));
+        else jeux.forEach(titre -> System.out.println("- " + titre));
     }
 
     public void gererJeu(Scanner scanner, JeuService jeuService, UtilisateurService userService,
@@ -53,7 +53,12 @@ public class JeuxController {
         System.out.println("Plateforme : " + jeu.getPlateforme());
         System.out.println("Date de sortie : " + jeu.getDateSortie());
         System.out.println("Éditeur : " + jeu.getEditeur());
-        System.out.println("Créé par : " + jeu.getCreateurId());
+        System.out.println("Créé par : " + userService.getPseudoById(jeu.getCreateurId()));
+        System.out.println("Critiques :");
+        critiqueService.listerCritiquesParJeu(jeu.getId());
+        System.out.println("Moyenne des évaluations : " + evalService.calculerMoyennePourJeu(jeu.getId()));
+        System.out.println("Évaluations :");
+        evalService.listerEvaluationsParJeu(jeu.getId());
 
         boolean sousMenuActif = true;
         while (sousMenuActif) {
