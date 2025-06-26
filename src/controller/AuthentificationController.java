@@ -4,7 +4,6 @@ import src.metier.Utilisateur;
 import src.metier.gestionnaires.UtilisateurGestionnaire;
 import src.service.AuthentificationService;
 import src.service.UtilisateurService;
-import src.utils.SecurityUtils;
 
 import java.util.Scanner;
 
