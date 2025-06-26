@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class Statistiques {
 
-    // Cette méthode calcule les statistiques de genre de jeux
     public static Map<String, Integer> calculerGenres(List<Jeu> jeux) {
         Map<String, Integer> stats = new HashMap<>();
 
@@ -22,11 +21,14 @@ public class Statistiques {
     }
 
     public static void afficherPourcentages(Map<String, Integer> stats) {
-        int total = stats.values().stream().mapToInt(Integer::intValue).sum();
+        int totalGenres = stats.values().stream().mapToInt(Integer::intValue).sum();
 
-        for (Map.Entry<String, Integer> entry : stats.entrySet()) {
-            double pourcentage = (entry.getValue() * 100.0) / total;
-            System.out.printf("%s : %.2f %%\n", entry.getKey(), pourcentage);
-        }
+        stats.entrySet().stream()
+            .sorted(Map.Entry.<String, Integer>comparingByValue().reversed()) // tri optionnel
+            .forEach(entry -> {
+                double pourcentage = (entry.getValue() * 100.0) / totalGenres;
+                System.out.printf("%-15s : %.2f %%\n", entry.getKey(), pourcentage);
+            });
     }
 }
+

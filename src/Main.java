@@ -54,7 +54,7 @@ public class Main {
 
                 switch (scanner.nextLine()) {
                     case "1" -> notificationService.afficherNotifications(authController.getUtilisateurConnecte().getId());
-                    case "2" -> jeuxController.afficherStatistiques(statistiquesService, authController.getUtilisateurConnecte());
+                    case "2" -> jeuxController.afficherStatistiques(statistiquesService, listeSouhaitsService, authController.getUtilisateurConnecte());
                     case "3" -> jeuxController.signalerErreur(scanner, rapportErreurService, authController.getUtilisateurConnecte());
                     case "4" -> jeuxController.gererJeu(scanner, jeuService, userService, listeSouhaitsService, evaluationService, critiqueService,
                             authController.getUtilisateurConnecte(), authController.getGestionnaire());

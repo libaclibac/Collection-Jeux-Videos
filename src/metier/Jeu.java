@@ -51,6 +51,7 @@ public class Jeu {
     public List<Evaluation> getEvaluations() { return evaluations; }
     public List<Critique> getCritiques() { return critiques; }
 
+    public void setId(int id) { this.id = id; }
     public void setTitre(String titre) { this.titre = titre; }
     public void setDescription(String description) { this.description = description; }
     public void setPlateforme(String plateforme) { this.plateforme = plateforme; }

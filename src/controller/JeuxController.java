@@ -5,18 +5,27 @@ import src.metier.enums.StatusRapport;
 import src.metier.gestionnaires.UtilisateurGestionnaire;
 import src.service.*;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
 public class JeuxController {
 
-    public void afficherStatistiques(StatistiquesService statistiquesService, Utilisateur utilisateurConnecte) {
+    public void afficherStatistiques(StatistiquesService statistiquesService, ListeDeSouhaitsService souhaitsService, Utilisateur utilisateurConnecte) {
         System.out.println("\n===== Statistiques =====");
         System.out.println("Pseudo: " + utilisateurConnecte.getPseudo());
         System.out.println("Email: " + utilisateurConnecte.getEmail());
-        System.out.println("Pourcentage de jeux par genre :");
-        Map<String, Integer> genreStats = statistiquesService.calculerGenres(utilisateurConnecte.getId());
-        statistiquesService.afficherPourcentages(genreStats);
+        System.out.println("Statistiques des genres des jeux dans votre liste de souhaits :");
+
+        List<Jeu> jeux = souhaitsService.listerJeuxSouhaitsUtilisateur(utilisateurConnecte.getId());
+
+        if (jeux.isEmpty()) {
+            System.out.println("Aucun jeu dans la liste de souhaits.");
+            return;
+        }
+
+        Map<String, Integer> statsGenres = Statistiques.calculerGenres(jeux);
+        Statistiques.afficherPourcentages(statsGenres);
     }
 
     public void signalerErreur(Scanner scanner, RapportErreurService rapportErreurService, Utilisateur utilisateurConnecte) {
