@@ -9,7 +9,6 @@ Un projet Java console permettant aux utilisateurs de :
 - Gérer une liste de souhaits
 - Consulter leurs statistiques et leurs notifications
 
----
 
 ## 🚀 Technologies
 
@@ -17,7 +16,6 @@ Un projet Java console permettant aux utilisateurs de :
 - SQLite (base de données embarquée)
 - JDBC (accès base de données)
 
----
 
 ## 🛠 Fonctionnalités principales
 
@@ -25,16 +23,13 @@ Un projet Java console permettant aux utilisateurs de :
 - **CRUD** complet sur les jeux vidéo (ajout, modification, suppression)
 - **Critiques** et **évaluations** individuelles (**1 critique et 1 évaluation par jeu maximum**, remplacement automatique si déjà ajouté)
 - **Rapports d'erreur** avec suivi du statut (ouvert, en traitement, résolu)
-- **Bot (pas encore implémenté)** pour automatiser la gestion des jeux et la suppression des critiques inappropriées
+- **Bot (pas implémenté)** pour automatiser la gestion des jeux et la suppression des critiques inappropriées
 - **Liste de souhaits** personnelle pour chaque utilisateur
 - **Statistiques** sur les genres de jeux ajoutés
-
----
 
 ## 📁 Arborescence simplifiée
 
 ```
-
 src/
 ├── controller/        // Logique de navigation, menus, interface console
 ├── database/          // Connexion BDD, initialisation (SQLite + JDBC)
@@ -44,19 +39,16 @@ src/
 └── Main.java          // Point d'entrée de l'application (menu principal)
 README.md
 .gitignore
-
 ````
 
 ⚠️ Les dossiers `bin/`, `lib/` et le fichier `.db` ne sont pas inclus dans le dépôt. Tu dois les créer comme indiqué ci-dessous.
 
----
 
 ## 🧰 Prérequis
 
 - Java JDK 17 ou supérieur
 - [SQLite JDBC driver (sqlite-jdbc-3.50.1.0.jar)](https://github.com/xerial/sqlite-jdbc/releases)
 
----
 
 ## 🏗 Préparation de l'environnement
 
@@ -69,8 +61,6 @@ mkdir lib
 
 Puis ajoute le fichier `sqlite-jdbc-3.50.1.0.jar` dans le dossier `lib/`.
 
----
-
 ## 🔧 Compilation
 
 ### Sous PowerShell (Windows)
@@ -79,8 +69,6 @@ Puis ajoute le fichier `sqlite-jdbc-3.50.1.0.jar` dans le dossier `lib/`.
 javac -cp "lib/sqlite-jdbc-3.50.1.0.jar" -d bin (Get-ChildItem -Recurse -Filter *.java -Path src | ForEach-Object { $_.FullName })
 ```
 
----
-
 ## ▶️ Exécution
 
 ```bash
@@ -88,8 +76,6 @@ java -cp "bin;lib/sqlite-jdbc-3.50.1.0.jar" src.Main
 ```
 
 *(Sur Linux ou Mac, remplacer `;` par `:` dans le classpath)*
-
----
 
 ## 📦 Génération d’un `.jar` (optionnel)
 
@@ -120,8 +106,6 @@ jar cfm JeuVideoApp.jar manifest.txt -C bin .
 java -jar JeuVideoApp.jar
 ```
 
----
-
 ## 🧑‍🎓 Projet étudiant
 
 Ce projet a pour objectif de mettre en pratique :
@@ -129,8 +113,6 @@ Ce projet a pour objectif de mettre en pratique :
 * L’héritage, le polymorphisme, les classes abstraites
 * Les interfaces, les énumérations, les méthodes `final`, `override`, `static`
 * L’organisation en couches (modèle - service - console)
-
----
 
 ## 📬 Auteur
 
