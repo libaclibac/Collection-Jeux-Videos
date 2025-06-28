@@ -17,7 +17,7 @@ database/database.db
 *.txt
 
 # 📚 Bibliothèques locales
-lib/*.jar
+lib/
 
 # 🗂 Système
 .DS_Store
