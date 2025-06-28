@@ -47,23 +47,23 @@ public class Main {
                 }
             } else {
                 System.out.println("\n===== Menu Utilisateur =====");
-                System.out.println("2. Voir mes statistiques");
-                System.out.println("3. Signaler une erreur");
-                System.out.println("4. Rechercher un jeu");
-                System.out.println("5. Gérer mes jeux");
-                System.out.println("6. Voir ma liste de souhaits");
-                System.out.println("7. Se déconnecter");
+                System.out.println("1. Voir mes statistiques");
+                System.out.println("2. Signaler une erreur");
+                System.out.println("3. Rechercher un jeu");
+                System.out.println("4. Gérer mes jeux");
+                System.out.println("5. Voir ma liste de souhaits");
+                System.out.println("6. Se déconnecter");
                 System.out.println("0. Quitter");
                 System.out.print("Choix : ");
 
                 switch (scanner.nextLine()) {
-                    case "2" -> jeuxController.afficherStatistiques(statistiquesService, listeSouhaitsService, authController.getUtilisateurConnecte());
-                    case "3" -> jeuxController.signalerErreur(scanner, rapportErreurService, authController.getUtilisateurConnecte());
-                    case "4" -> jeuxController.gererJeu(scanner, jeuService, userService, listeSouhaitsService, evaluationService, critiqueService,
+                    case "1" -> jeuxController.afficherStatistiques(statistiquesService, listeSouhaitsService, authController.getUtilisateurConnecte());
+                    case "2" -> jeuxController.signalerErreur(scanner, rapportErreurService, authController.getUtilisateurConnecte());
+                    case "3" -> jeuxController.gererJeu(scanner, jeuService, userService, listeSouhaitsService, evaluationService, critiqueService,
                             authController.getUtilisateurConnecte(), authController.getGestionnaire());
-                    case "5" -> jeuxController.gererMesJeux(scanner, jeuService, authController.getUtilisateurConnecte(), authController.getGestionnaire());
-                    case "6" -> jeuxController.afficherListeSouhaits(listeSouhaitsService, authController.getUtilisateurConnecte());
-                    case "7" -> authController.seDeconnecter();
+                    case "4" -> jeuxController.gererMesJeux(scanner, jeuService, authController.getUtilisateurConnecte(), authController.getGestionnaire());
+                    case "5" -> jeuxController.afficherListeSouhaits(listeSouhaitsService, authController.getUtilisateurConnecte());
+                    case "6" -> authController.seDeconnecter();
                     case "0" -> running = false;
                     default -> System.out.println("Choix invalide.");
                 }
