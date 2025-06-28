@@ -5,6 +5,9 @@ import src.metier.enums.StatusRapport;
 import src.metier.gestionnaires.UtilisateurGestionnaire;
 import src.service.*;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -41,6 +44,28 @@ public class JeuxController {
         var jeux = service.listerTitresSouhaitsUtilisateur(utilisateurConnecte.getId());
         if (jeux.isEmpty()) System.out.println("Aucun jeu dans votre liste.");
         else jeux.forEach(titre -> System.out.println("- " + titre));
+
+        exporterListeSouhaitsDansFichier(service, utilisateurConnecte, "souhaits_" + utilisateurConnecte.getPseudo() + ".txt");
+    }
+
+    public void exporterListeSouhaitsDansFichier(ListeDeSouhaitsService service, Utilisateur utilisateurConnecte, String cheminFichier) {
+        List<String> jeux = service.listerTitresSouhaitsUtilisateur(utilisateurConnecte.getId());
+
+        if (jeux.isEmpty()) {
+            System.out.println("Aucun jeu à exporter.");
+            return;
+        }
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(cheminFichier))) {
+            writer.write("Liste de souhaits de " + utilisateurConnecte.getPseudo() + " :\n\n");
+            for (String titre : jeux) {
+                writer.write("- " + titre);
+                writer.newLine();
+            }
+            System.out.println("Liste de souhaits exportée avec succès vers : " + cheminFichier);
+        } catch (IOException e) {
+            System.err.println("Erreur lors de l'exportation de la liste : " + e.getMessage());
+        }
     }
 
     public void gererJeu(Scanner scanner, JeuService jeuService, UtilisateurService userService,

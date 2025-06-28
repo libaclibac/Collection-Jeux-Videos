@@ -13,11 +13,11 @@ database/database.db
 .idea/
 
 # 📦 Fichiers générés manuellement
-JeuVideoApp.jar
-manifest.txt
+*.jar
+*.txt
 
 # 📚 Bibliothèques locales
-lib/sqlite-jdbc-*.jar
+lib/*.jar
 
 # 🗂 Système
 .DS_Store
