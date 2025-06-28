@@ -13,22 +13,21 @@ Ce projet Java est une application console permettant de gérer une base de donn
 - ✅ Statistiques sur les genres de jeux (depuis la liste de souhaits)
 - ✅ Signalement d’erreurs (création de rapports)
 - ✅ Import automatique de jeux via fichier JSON
+- ✅ Export automatique de la liste de souhaits de l'utilisateur dans un fichier texte (`souhaits_<pseudo>.txt`)
 
 ---
 
 ## 📁 Structure du projet
 
 ```
-
-📦 src/
-┣ 📂controller/         → Contrôleurs (menus et logique console)
-┣ 📂database/           → Base SQLite + initialisation
-┣ 📂metier/             → Modèles métiers (Jeu, Utilisateur, etc.)
-┣ 📂metier/gestionnaires → Actions utilisateur/bot via interface
-┣ 📂service/            → Accès BDD et logique fonctionnelle
-┣ 📂utils/              → Utilitaires (ex : hachage SHA-256)
-┗ Main.java             → Menu principal du programme
-
+src/
+┣ controller/               → Contrôleurs (menus et logique console)
+┣ database/                 → Base SQLite + initialisation
+┣ metier/                   → Modèles métiers (Jeu, Utilisateur, etc.)
+┣ metier/gestionnaires      → Actions utilisateur/bot via interface
+┣ service/                  → Accès BDD et logique fonctionnelle
+┣ utils/                    → Utilitaires (ex : hachage SHA-256)
+┗ Main.java                 → Menu principal du programme
 ````
 
 ---
