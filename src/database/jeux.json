@@ -1,0 +1,602 @@
+[
+  {
+    "titre": "Life is Strange: True Colors",
+    "description": "Aventure narrative avec des choix impactants",
+    "plateforme": "Multi",
+    "genre": ["Adventure", "Narrative", "Drama"],
+    "date_sortie": "2021-09-10",
+    "editeur": "Deck Nine"
+  },
+  {
+    "titre": "The Legend of Zelda: Tears of the Kingdom",
+    "description": "Suite de Breath of the Wild avec de nouvelles mécaniques",
+    "plateforme": "Nintendo Switch",
+    "genre": ["Action", "Adventure", "Open World"],
+    "date_sortie": "2023-05-12",
+    "editeur": "Nintendo"
+  },
+  {
+    "titre": "Super Mario Odyssey",
+    "description": "Aventure en 3D avec Mario dans divers mondes",
+    "plateforme": "Nintendo Switch",
+    "genre": ["Platformer", "Adventure", "Family"],
+    "date_sortie": "2017-10-27",
+    "editeur": "Nintendo"
+  },
+  {
+    "titre": "Halo Infinite",
+    "description": "Un FPS futuriste",
+    "plateforme": "Xbox",
+    "genre": ["Shooter", "Sci-Fi"],
+    "date_sortie": "2021-12-08",
+    "editeur": "343 Industries"
+  },
+  {
+    "titre": "Stardew Valley",
+    "description": "Jeu de ferme et de rôle",
+    "plateforme": "PC",
+    "genre": ["Simulation", "RPG", "Indie"],
+    "date_sortie": "2016-02-26",
+    "editeur": "ConcernedApe"
+  },
+  {
+    "titre": "The Witcher 3",
+    "description": "Action RPG dans un univers fantasy",
+    "plateforme": "PC",
+    "genre": ["RPG", "Action", "Fantasy"],
+    "date_sortie": "2015-05-19",
+    "editeur": "CD Projekt"
+  },
+  {
+    "titre": "Celeste",
+    "description": "Un jeu de plateforme exigeant",
+    "plateforme": "PC",
+    "genre": ["Platformer", "Indie", "Adventure"],
+    "date_sortie": "2018-01-25",
+    "editeur": "Maddy Makes Games"
+  },
+  {
+    "titre": "Hades",
+    "description": "Roguelike avec des combats dynamiques",
+    "plateforme": "PC",
+    "genre": ["Roguelike", "Action", "Indie"],
+    "date_sortie": "2020-09-17",
+    "editeur": "Supergiant Games"
+  },
+  {
+    "titre": "God of War",
+    "description": "Jeu d'action mythologique",
+    "plateforme": "PlayStation",
+    "genre": ["Action", "Adventure"],
+    "date_sortie": "2018-04-20",
+    "editeur": "Santa Monica Studio"
+  },
+  {
+    "titre": "Minecraft",
+    "description": "Jeu de construction et survie",
+    "plateforme": "Multi",
+    "genre": ["Sandbox", "Survival", "Adventure"],
+    "date_sortie": "2011-11-18",
+    "editeur": "Mojang"
+  },
+  {
+    "titre": "Overwatch",
+    "description": "Jeu de tir en équipe",
+    "plateforme": "PC",
+    "genre": ["Shooter", "Multiplayer", "Hero Shooter"],
+    "date_sortie": "2016-05-24",
+    "editeur": "Blizzard Entertainment"
+  },
+  {
+    "titre": "Cyberpunk 2077",
+    "description": "Jeu de rôle futuriste",
+    "plateforme": "PC",
+    "genre": ["RPG", "Action", "Open World"],
+    "date_sortie": "2020-12-10",
+    "editeur": "CD Projekt"
+  },
+  {
+    "titre": "Terraria",
+    "description": "Jeu bac à sable en 2D",
+    "plateforme": "PC",
+    "genre": ["Sandbox", "Survival", "Adventure"],
+    "date_sortie": "2011-05-16",
+    "editeur": "Re-Logic"
+  },
+  {
+    "titre": "Among Us",
+    "description": "Jeu multijoueur de déduction sociale",
+    "plateforme": "Multi",
+    "genre": ["Party", "Multiplayer", "Strategy"],
+    "date_sortie": "2018-06-15",
+    "editeur": "InnerSloth"
+  },
+  {
+    "titre": "Final Fantasy VII Remake",
+    "description": "Remake du classique RPG",
+    "plateforme": "PlayStation",
+    "genre": ["RPG", "Adventure", "Fantasy"],
+    "date_sortie": "2020-04-10",
+    "editeur": "Square Enix"
+  },
+  {
+    "titre": "Apex Legends",
+    "description": "Battle royale en équipe",
+    "plateforme": "PC",
+    "genre": ["Battle Royale", "Shooter", "Multiplayer"],
+    "date_sortie": "2019-02-04",
+    "editeur": "Respawn Entertainment"
+  },
+  {
+    "titre": "The Legend of Zelda: Breath of the Wild",
+    "description": "Jeu d'aventure en monde ouvert",
+    "plateforme": "Nintendo Switch",
+    "genre": ["Action", "Adventure", "Open World"],
+    "date_sortie": "2017-03-03",
+    "editeur": "Nintendo"
+  },
+  {
+    "titre": "Animal Crossing: New Horizons",
+    "description": "Simulation de vie insulaire",
+    "plateforme": "Nintendo Switch",
+    "genre": ["Simulation", "Social", "Casual"],
+    "date_sortie": "2020-03-20",
+    "editeur": "Nintendo"
+  },
+  {
+    "titre": "Genshin Impact",
+    "description": "Action RPG en monde ouvert",
+    "plateforme": "Multi",
+    "genre": ["RPG", "Action", "Open World"],
+    "date_sortie": "2020-09-28",
+    "editeur": "miHoYo"
+  },
+  {
+    "titre": "Valorant",
+    "description": "Jeu de tir tactique en équipe",
+    "plateforme": "PC",
+    "genre": ["Shooter", "Tactical", "Multiplayer"],
+    "date_sortie": "2020-06-02",
+    "editeur": "Riot Games"
+  },
+  {
+    "titre": "Dark Souls III",
+    "description": "Action RPG exigeant et sombre",
+    "plateforme": "PC",
+    "genre": ["RPG", "Action", "Fantasy"],
+    "date_sortie": "2016-03-24",
+    "editeur": "FromSoftware"
+  },
+  {
+    "titre": "Sekiro: Shadows Die Twice",
+    "description": "Action RPG avec des combats intenses",
+    "plateforme": "PC",
+    "genre": ["Action", "Adventure", "RPG"],
+    "date_sortie": "2019-03-22",
+    "editeur": "FromSoftware"
+  },
+  {
+    "titre": "Monster Hunter: World",
+    "description": "Action RPG de chasse aux monstres",
+    "plateforme": "PC",
+    "genre": ["Action", "RPG", "Adventure"],
+    "date_sortie": "2018-08-09",
+    "editeur": "Capcom"
+  },
+  {
+    "titre": "Assassin's Creed Valhalla",
+    "description": "Action RPG dans l'univers des Vikings",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Open World"],
+    "date_sortie": "2020-11-10",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Resident Evil Village",
+    "description": "Survival horror dans un village mystérieux",
+    "plateforme": "Multi",
+    "genre": ["Horror", "Action", "Adventure"],
+    "date_sortie": "2021-05-07",
+    "editeur": "Capcom"
+  },
+  {
+    "titre": "The Last of Us Part II",
+    "description": "Action aventure post-apocalyptique",
+    "plateforme": "PlayStation",
+    "genre": ["Action", "Adventure", "Drama"],
+    "date_sortie": "2020-06-19",
+    "editeur": "Naughty Dog"
+  },
+  {
+    "titre": "Ghostrunner",
+    "description": "Action rapide en monde cybernétique",
+    "plateforme": "Multi",
+    "genre": ["Action", "Platformer", "Cyberpunk"],
+    "date_sortie": "2020-10-27",
+    "editeur": "One More Level"
+  },
+  {
+    "titre": "Returnal",
+    "description": "Roguelike avec des éléments de science-fiction",
+    "plateforme": "PlayStation",
+    "genre": ["Roguelike", "Action", "Sci-Fi"],
+    "date_sortie": "2021-04-30",
+    "editeur": "Housemarque"
+  },
+  {
+    "titre": "Ghost of Tsushima",
+    "description": "Action aventure dans le Japon féodal",
+    "plateforme": "PlayStation",
+    "genre": ["Action", "Adventure", "Open World"],
+    "date_sortie": "2020-07-17",
+    "editeur": "Sucker Punch Productions"
+  },
+  {
+    "titre": "Spider-Man: Miles Morales",
+    "description": "Jeu d'action-aventure dans l'univers de Spider-Man",
+    "plateforme": "PlayStation",
+    "genre": ["Action", "Adventure", "Superhero"],
+    "date_sortie": "2020-11-12",
+    "editeur": "Insomniac Games"
+  },
+  {
+    "titre": "Forza Horizon 5",
+    "description": "Jeu de course en monde ouvert",
+    "plateforme": "Multi",
+    "genre": ["Racing", "Open World", "Simulation"],
+    "date_sortie": "2021-11-09",
+    "editeur": "Playground Games"
+  },
+  {
+    "titre": "Ratchet & Clank: Rift Apart",
+    "description": "Action aventure avec des voyages dimensionnels",
+    "plateforme": "PlayStation",
+    "genre": ["Action", "Adventure", "Platformer"],
+    "date_sortie": "2021-06-11",
+    "editeur": "Insomniac Games"
+  },
+  {
+    "titre": "Demon's Souls",
+    "description": "Remake du classique action RPG",
+    "plateforme": "PlayStation",
+    "genre": ["RPG", "Action", "Fantasy"],
+    "date_sortie": "2020-11-12",
+    "editeur": "Bluepoint Games"
+  },
+  {
+    "titre": "It Takes Two",
+    "description": "Jeu coopératif d'aventure et de plateforme",
+    "plateforme": "Multi",
+    "genre": ["Adventure", "Platformer", "Co-op"],
+    "date_sortie": "2021-03-26",
+    "editeur": "Hazelight Studios"
+  },
+  {
+    "titre": "Deathloop",
+    "description": "Jeu d'action avec des boucles temporelles",
+    "plateforme": "PC",
+    "genre": ["Action", "Shooter", "Adventure"],
+    "date_sortie": "2021-09-14",
+    "editeur": "Arkane Studios"
+  },
+  {
+    "titre": "Hitman 3",
+    "description": "Jeu d'infiltration et d'assassinat",
+    "plateforme": "Multi",
+    "genre": ["Stealth", "Action", "Adventure"],
+    "date_sortie": "2021-01-20",
+    "editeur": "IO Interactive"
+  },
+  {
+    "titre": "Psychonauts 2",
+    "description": "Jeu de plateforme et d'aventure psychédélique",
+    "plateforme": "Multi",
+    "genre": ["Platformer", "Adventure", "Indie"],
+    "date_sortie": "2021-08-25",
+    "editeur": "Double Fine Productions"
+  },
+  {
+    "titre": "Monster Hunter Rise",
+    "description": "Action RPG de chasse aux monstres sur Nintendo Switch",
+    "plateforme": "Nintendo Switch",
+    "genre": ["Action", "RPG", "Adventure"],
+    "date_sortie": "2021-03-26",
+    "editeur": "Capcom"
+  },
+  {
+    "titre": "Return to Monkey Island",
+    "description": "Nouvelle aventure dans l'univers de Monkey Island",
+    "plateforme": "Multi",
+    "genre": ["Adventure", "Comedy", "Point-and-Click"],
+    "date_sortie": "2022-09-19",
+    "editeur": "Terrible Toybox"
+  },
+  {
+    "titre": "Elden Ring",
+    "description": "Action RPG en monde ouvert avec des éléments de fantasy",
+    "plateforme": "Multi",
+    "genre": ["RPG", "Action", "Open World"],
+    "date_sortie": "2022-02-25",
+    "editeur": "FromSoftware"
+  },
+  {
+    "titre": "Horizon Forbidden West",
+    "description": "Action RPG dans un monde post-apocalyptique",
+    "plateforme": "PlayStation",
+    "genre": ["RPG", "Action", "Adventure"],
+    "date_sortie": "2022-02-18",
+    "editeur": "Guerrilla Games"
+  },
+  {
+    "titre": "Stray",
+    "description": "Aventure dans un monde cybernétique en tant que chat",
+    "plateforme": "Multi",
+    "genre": ["Adventure", "Indie", "Exploration"],
+    "date_sortie": "2022-07-19",
+    "editeur": "BlueTwelve Studio"
+  },
+  {
+    "titre": "God of War Ragnarök",
+    "description": "Suite de l'épopée de Kratos et Atreus",
+    "plateforme": "PlayStation",
+    "genre": ["Action", "Adventure", "Mythology"],
+    "date_sortie": "2022-11-09",
+    "editeur": "Santa Monica Studio"
+  },
+  {
+    "titre": "The Callisto Protocol",
+    "description": "Survival horror dans une station spatiale",
+    "plateforme": "Multi",
+    "genre": ["Horror", "Action", "Survival"],
+    "date_sortie": "2022-12-02",
+    "editeur": "Striking Distance Studios"
+  },
+  {
+    "titre": "Starfield",
+    "description": "Jeu de rôle spatial en monde ouvert",
+    "plateforme": "PC",
+    "genre": ["RPG", "Sci-Fi", "Open World"],
+    "date_sortie": "2023-09-06",
+    "editeur": "Bethesda Game Studios"
+  },
+  {
+    "titre": "Hogwarts Legacy",
+    "description": "Action RPG dans l'univers de Harry Potter",
+    "plateforme": "Multi",
+    "genre": ["RPG", "Action", "Fantasy"],
+    "date_sortie": "2023-02-10",
+    "editeur": "Portkey Games"
+  },
+  {
+    "titre": "Resident Evil 4 Remake",
+    "description": "Remake du classique survival horror",
+    "plateforme": "Multi",
+    "genre": ["Horror", "Action", "Adventure"],
+    "date_sortie": "2023-03-24",
+    "editeur": "Capcom"
+  },
+  {
+    "titre": "Street Fighter 6",
+    "description": "Nouvelle entrée dans la célèbre série de jeux de combat",
+    "plateforme": "Multi",
+    "genre": ["Fighting", "Action", "Multiplayer"],
+    "date_sortie": "2023-06-02",
+    "editeur": "Capcom"
+  },
+  {
+    "titre": "Baldur's Gate 3",
+    "description": "RPG tactique basé sur l'univers de Dungeons & Dragons",
+    "plateforme": "PC",
+    "genre": ["RPG", "Tactical", "Fantasy"],
+    "date_sortie": "2023-08-03",
+    "editeur": "Larian Studios"
+  },
+  {
+    "titre": "Diablo IV",
+    "description": "Action RPG dans un monde sombre et fantastique",
+    "plateforme": "Multi",
+    "genre": ["Action", "RPG", "Hack and Slash"],
+    "date_sortie": "2023-06-06",
+    "editeur": "Blizzard Entertainment"
+  },
+  {
+    "titre": "Armored Core VI: Fires of Rubicon",
+    "description": "Jeu de mecha avec des combats intenses",
+    "plateforme": "Multi",
+    "genre": ["Action", "Mecha", "Simulation"],
+    "date_sortie": "2023-08-25",
+    "editeur": "FromSoftware"
+  },
+  {
+    "titre": "Lies of P",
+    "description": "Action RPG inspiré de l'histoire de Pinocchio",
+    "plateforme": "Multi",
+    "genre": ["RPG", "Action", "Dark Fantasy"],
+    "date_sortie": "2023-09-19",
+    "editeur": "Neowiz Games"
+  },
+  {
+    "titre": "Assassin's Creed Mirage",
+    "description": "Retour aux racines de la franchise avec un focus sur l'infiltration",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2023-10-05",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Alan Wake II",
+    "description": "Suite du thriller psychologique avec des éléments d'horreur",
+    "plateforme": "Multi",
+    "genre": ["Horror", "Action", "Adventure"],
+    "date_sortie": "2023-10-27",
+    "editeur": "Remedy Entertainment"
+  },
+  {
+    "titre": "Super Mario Bros. Wonder",
+    "description": "Nouvelle aventure de Mario avec des mécaniques innovantes",
+    "plateforme": "Nintendo Switch",
+    "genre": ["Platformer", "Adventure", "Family"],
+    "date_sortie": "2023-10-20",
+    "editeur": "Nintendo"
+  },
+  {
+    "titre": "Spider-Man 2",
+    "description": "Suite des aventures de Spider-Man dans un monde ouvert",
+    "plateforme": "PlayStation",
+    "genre": ["Action", "Adventure", "Superhero"],
+    "date_sortie": "2023-10-20",
+    "editeur": "Insomniac Games"
+  },
+  {
+    "titre": "Star Wars Jedi: Survivor",
+    "description": "Suite de l'aventure de Cal Kestis dans l'univers Star Wars",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Sci-Fi"],
+    "date_sortie": "2023-04-28",
+    "editeur": "Respawn Entertainment"
+  },
+  {
+    "titre": "Final Fantasy XVI",
+    "description": "Nouvelle entrée dans la célèbre série de RPG",
+    "plateforme": "PlayStation",
+    "genre": ["RPG", "Action", "Fantasy"],
+    "date_sortie": "2023-06-22",
+    "editeur": "Square Enix"
+  },
+  {
+    "titre": "Life is Strange",
+    "description": "Aventure narrative avec des choix impactants",
+    "plateforme": "Multi",
+    "genre": ["Adventure", "Narrative", "Drama"],
+    "date_sortie": "2015-01-30",
+    "editeur": "Dontnod Entertainment"
+  },
+  {
+    "titre": "Life is Strange: Before the Storm",
+    "description": "Préquelle de Life is Strange",
+    "plateforme": "Multi",
+    "genre": ["Adventure", "Narrative", "Drama"],
+    "date_sortie": "2017-08-31",
+    "editeur": "Deck Nine"
+  },
+  {
+    "titre": "The Awesome Adventures of Captain Spirit",
+    "description": "Spin-off de Life is Strange centré sur un jeune garçon",
+    "plateforme": "Multi",
+    "genre": ["Adventure", "Narrative", "Drama"],
+    "date_sortie": "2018-06-26",
+    "editeur": "Deck Nine"
+  },
+  {
+    "titre": "Life is Strange 2",
+    "description": "Suite de Life is Strange avec de nouveaux personnages",
+    "plateforme": "Multi",
+    "genre": ["Adventure", "Narrative", "Drama"],
+    "date_sortie": "2018-09-27",
+    "editeur": "Dontnod Entertainment"
+  },
+  {
+    "titre": "The Last of Us",
+    "description": "Aventure post-apocalyptique avec des éléments de survie",
+    "plateforme": "PlayStation",
+    "genre": ["Action", "Adventure", "Survival"],
+    "date_sortie": "2013-06-14",
+    "editeur": "Naughty Dog"
+  },
+  {
+    "titre": "The Last of Us: Left Behind",
+    "description": "DLC pour The Last of Us",
+    "plateforme": "PlayStation",
+    "genre": ["Action", "Adventure", "Survival"],
+    "date_sortie": "2014-02-14",
+    "editeur": "Naughty Dog"
+  },
+  {
+    "titre": "Assassin's Creed",
+    "description": "Jeu d'action-aventure historique",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2007-11-13",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Assassin's Creed II",
+    "description": "Suite d'Assassin's Creed dans l'Italie de la Renaissance",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2009-11-17",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Assassin's Creed: Brotherhood",
+    "description": "Suite directe d'Assassin's Creed II",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2010-11-16",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Assassin's Creed: Revelations",
+    "description": "Suite d'Assassin's Creed: Brotherhood",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2011-11-15",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Assassin's Creed III",
+    "description": "Assassin's Creed pendant la Révolution américaine",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2012-10-30",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Assassin's Creed IV: Black Flag",
+    "description": "Assassin's Creed dans l'âge d'or de la piraterie",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2013-10-29",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Assassin's Creed: Rogue",
+    "description": "Assassin's Creed pendant la guerre de Sept Ans",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2014-11-11",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Assassin's Creed: Unity",
+    "description": "Assassin's Creed pendant la Révolution française",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2014-11-11",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Assassin's Creed: Syndicate",
+    "description": "Assassin's Creed dans le Londres victorien",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2015-10-23",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Assassin's Creed: Origins",
+    "description": "Assassin's Creed dans l'Égypte antique",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2017-10-27",
+    "editeur": "Ubisoft"
+  },
+  {
+    "titre": "Assassin's Creed: Odyssey",
+    "description": "Assassin's Creed dans la Grèce antique",
+    "plateforme": "Multi",
+    "genre": ["Action", "Adventure", "Stealth"],
+    "date_sortie": "2018-10-05",
+    "editeur": "Ubisoft"
+  }
+]

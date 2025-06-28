@@ -62,7 +62,7 @@ public class JeuxController {
         System.out.println("Plateforme : " + jeu.getPlateforme());
         System.out.println("Date de sortie : " + jeu.getDateSortie());
         System.out.println("Éditeur : " + jeu.getEditeur());
-        System.out.println("Créé par : " + userService.getPseudoById(jeu.getCreateurId()));
+        System.out.println("Ajouté par : " + userService.getPseudoById(jeu.getCreateurId()));
         System.out.println("Critiques :");
         critiqueService.listerCritiquesParJeu(jeu.getId());
         System.out.println("Moyenne des évaluations : " + evalService.calculerMoyennePourJeu(jeu.getId()));
@@ -131,6 +131,13 @@ public class JeuxController {
             case "1" -> {
                 System.out.print("Titre : ");
                 String titre = scanner.nextLine();
+
+                // Vérifie si le jeu existe déjà
+                if (jeuService.existeJeu(titre)) {
+                    System.out.println("Ce jeu existe déjà !");
+                    break;
+                }
+
                 System.out.print("Description : ");
                 String description = scanner.nextLine();
                 System.out.print("Plateforme : ");

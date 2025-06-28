@@ -60,4 +60,26 @@ public class UtilisateurService {
         }
         return pseudo != null ? pseudo : "Inconnu";
     }
+
+    public void initBot() {
+        String checkSql = "SELECT id FROM utilisateurs WHERE id = 0";
+        String insertSql = "INSERT INTO utilisateurs (id, pseudo, email, mot_de_passe) VALUES (0, 'Bot', '', '')";
+
+        try (Connection conn = DatabaseManager.getConnection();
+            PreparedStatement checkStmt = conn.prepareStatement(checkSql)) {
+
+            ResultSet rs = checkStmt.executeQuery();
+            if (!rs.next()) { // Si aucun utilisateur avec id = 0
+                try (PreparedStatement insertStmt = conn.prepareStatement(insertSql)) {
+                    insertStmt.executeUpdate();
+                    System.out.println("Utilisateur 'Bot' initialisé dans la base.");
+                }
+            } else {
+                System.out.println("Utilisateur 'Bot' déjà présent.");
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Erreur lors de l'initialisation du bot : " + e.getMessage());
+        }
+    }
 }

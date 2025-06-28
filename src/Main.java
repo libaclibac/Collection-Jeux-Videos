@@ -2,6 +2,7 @@ package src;
 
 import src.controller.AuthentificationController;
 import src.controller.JeuxController;
+import src.metier.gestionnaires.BotGestionnaire;
 import src.service.*;
 
 import java.util.Scanner;
@@ -25,6 +26,11 @@ public class Main {
         // Contrôleurs
         AuthentificationController authController = new AuthentificationController();
         JeuxController jeuxController = new JeuxController();
+
+        userService.initBot();
+
+        BotGestionnaire bot = new BotGestionnaire();
+        bot.importerDepuisJSON("src/database/jeux.json");
 
         boolean running = true;
         while (running) {

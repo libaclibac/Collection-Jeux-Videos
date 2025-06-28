@@ -91,4 +91,35 @@ public class JeuService {
         }
         return null;
     }
+
+    public boolean existeJeu(String titre, String plateforme) {
+        String sql = "SELECT COUNT(*) FROM jeux WHERE titre = ? AND plateforme = ?";
+        try (Connection conn = DatabaseManager.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, titre);
+            stmt.setString(2, plateforme);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+        } catch (SQLException e) {
+            System.err.println("Erreur vérification existence jeu : " + e.getMessage());
+        }
+        return false;
+    }
+
+    public boolean existeJeu(String titre) {
+        String sql = "SELECT COUNT(*) FROM jeux WHERE titre = ?";
+        try (Connection conn = DatabaseManager.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, titre);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+        } catch (SQLException e) {
+            System.err.println("Erreur vérification existence jeu : " + e.getMessage());
+        }
+        return false;
+    }
 }
