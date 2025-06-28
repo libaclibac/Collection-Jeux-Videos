@@ -9,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class EvaluationService {
-    private final NotificationService notificationService = new NotificationService();
 
     public boolean ajouterEvaluationPourJeu(Evaluation e, String titreJeu) {
         String sql = "INSERT OR REPLACE INTO evaluations (note, date_evaluation, utilisateur_id, jeu_id) VALUES (?, ?, ?, ?)";
@@ -20,7 +19,6 @@ public class EvaluationService {
             stmt.setInt(3, e.getUtilisateurId());
             stmt.setInt(4, e.getJeuId());
             stmt.executeUpdate();
-            notificationService.notifierEvaluation(e.getUtilisateurId(), titreJeu, e.getNote());
             return true;
         } catch (SQLException ex) {
             return false;
@@ -71,27 +69,25 @@ public class EvaluationService {
     }
 
     public void listerEvaluationsParJeu(int jeuId) {
-    String sql = "SELECT * FROM evaluations WHERE jeu_id = ?";
-    UtilisateurService utilisateurService = new UtilisateurService();
+        String sql = "SELECT * FROM evaluations WHERE jeu_id = ?";
+        UtilisateurService utilisateurService = new UtilisateurService();
 
-    try (Connection conn = DatabaseManager.getConnection();
-         PreparedStatement stmt = conn.prepareStatement(sql)) {
+        try (Connection conn = DatabaseManager.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-        stmt.setInt(1, jeuId);
-        ResultSet rs = stmt.executeQuery();
+            stmt.setInt(1, jeuId);
+            ResultSet rs = stmt.executeQuery();
 
-        while (rs.next()) {
-            int userId = rs.getInt("utilisateur_id");
-            String pseudo = utilisateurService.getPseudoById(userId);
-            int note = rs.getInt("note");
+            while (rs.next()) {
+                int userId = rs.getInt("utilisateur_id");
+                String pseudo = utilisateurService.getPseudoById(userId);
+                int note = rs.getInt("note");
 
-            System.out.println("- " + pseudo + " : " + note + "/5 ");
+                System.out.println("- " + pseudo + " : " + note + "/5 ");
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Erreur lors de la récupération des évaluations : " + e.getMessage());
         }
-
-    } catch (SQLException e) {
-        System.err.println("Erreur lors de la récupération des évaluations : " + e.getMessage());
     }
-}
-
-
 }

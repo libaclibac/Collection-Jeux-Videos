@@ -9,7 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class RapportErreurService {
-    private final NotificationService notificationService = new NotificationService();
 
     public boolean creerRapport(RapportErreur r, String titreJeu) {
         String sql = "INSERT INTO rapports_erreurs (description, date_signalement, utilisateur_id, jeu_id, statut) VALUES (?, ?, ?, ?, ?)";
@@ -21,7 +20,6 @@ public class RapportErreurService {
             stmt.setInt(4, r.getJeuId());
             stmt.setString(5, r.getStatus().name());
             stmt.executeUpdate();
-            notificationService.notifierRapportErreur(r.getUtilisateurId(), titreJeu);
             return true;
         } catch (SQLException e) {
             return false;
@@ -35,7 +33,6 @@ public class RapportErreurService {
             stmt.setString(1, nouveauStatut.name());
             stmt.setInt(2, idRapport);
             stmt.executeUpdate();
-            notificationService.notifierRapportTraité(utilisateurId, titreJeu, nouveauStatut.name());
             return true;
         } catch (SQLException e) {
             return false;

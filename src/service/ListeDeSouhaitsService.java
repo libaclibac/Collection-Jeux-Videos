@@ -1,7 +1,6 @@
 package src.service;
 
 import src.database.DatabaseManager;
-import src.metier.Jeu;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -69,10 +68,10 @@ public class ListeDeSouhaitsService {
         return titres;
     }
 
-    public List<Jeu> listerJeuxSouhaitsUtilisateur(int utilisateurId) {
-        List<Jeu> jeux = new ArrayList<>();
+    public List<String> listerGenresSouhaitsUtilisateur(int utilisateurId) {
+        List<String> genres = new ArrayList<>();
         String sql = """
-            SELECT j.* FROM jeux j
+            SELECT j.genre FROM jeux j
             INNER JOIN liste_souhaits l ON l.jeu_id = j.id
             WHERE l.utilisateur_id = ?
         """;
@@ -84,23 +83,13 @@ public class ListeDeSouhaitsService {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                Jeu jeu = new Jeu();
-                jeu.setId(rs.getInt("id"));
-                jeu.setTitre(rs.getString("titre"));
-                jeu.setDescription(rs.getString("description"));
-                jeu.setPlateforme(rs.getString("plateforme"));
-                jeu.setGenre(rs.getString("genre"));
-                jeu.setDateSortie(rs.getString("date_sortie"));
-                jeu.setEditeur(rs.getString("editeur"));
-                jeu.setCreateurId(rs.getInt("createur_id"));
-                jeux.add(jeu);
+                genres.add(rs.getString("genre"));
             }
 
         } catch (SQLException e) {
-            System.err.println("Erreur récupération jeux souhaits : " + e.getMessage());
+            System.err.println("Erreur récupération genres souhaits : " + e.getMessage());
         }
 
-        return jeux;
+        return genres;
     }
-
 }

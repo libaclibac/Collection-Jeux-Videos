@@ -20,15 +20,13 @@ public class JeuxController {
         System.out.println("Email: " + utilisateurConnecte.getEmail());
         System.out.println("Statistiques des genres des jeux dans votre liste de souhaits :");
 
-        List<Jeu> jeux = souhaitsService.listerJeuxSouhaitsUtilisateur(utilisateurConnecte.getId());
-
-        if (jeux.isEmpty()) {
-            System.out.println("Aucun jeu dans la liste de souhaits.");
-            return;
-        }
-
-        Map<String, Integer> statsGenres = Statistiques.calculerGenres(jeux);
+        List<String> genres = souhaitsService.listerGenresSouhaitsUtilisateur(utilisateurConnecte.getId());
+        Map<String, Integer> statsGenres = Statistiques.calculerGenresDepuisStrings(genres);
         Statistiques.afficherPourcentages(statsGenres);
+
+        if (statsGenres.isEmpty()) {
+            System.out.println("Aucun jeu dans votre liste de souhaits.");
+        }
     }
 
     public void signalerErreur(Scanner scanner, RapportErreurService rapportErreurService, Utilisateur utilisateurConnecte) {

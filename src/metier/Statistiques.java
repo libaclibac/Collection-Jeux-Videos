@@ -6,11 +6,11 @@ import java.util.Map;
 
 public class Statistiques {
 
-    public static Map<String, Integer> calculerGenres(List<Jeu> jeux) {
+    public static Map<String, Integer> calculerGenresDepuisStrings(List<String> genresList) {
         Map<String, Integer> stats = new HashMap<>();
 
-        for (Jeu jeu : jeux) {
-            String[] genres = jeu.getGenre().split(",");
+        for (String genreChaine : genresList) {
+            String[] genres = genreChaine.split(",");
             for (String genre : genres) {
                 genre = genre.trim().toLowerCase();
                 stats.put(genre, stats.getOrDefault(genre, 0) + 1);
@@ -18,7 +18,7 @@ public class Statistiques {
         }
 
         return stats;
-    }
+}
 
     public static void afficherPourcentages(Map<String, Integer> stats) {
         int totalGenres = stats.values().stream().mapToInt(Integer::intValue).sum();

@@ -16,7 +16,6 @@ public class Main {
         AuthentificationService auth = new AuthentificationService();
         UtilisateurService userService = new UtilisateurService();
         JeuService jeuService = new JeuService();
-        NotificationService notificationService = new NotificationService();
         StatistiquesService statistiquesService = new StatistiquesService();
         RapportErreurService rapportErreurService = new RapportErreurService();
         ListeDeSouhaitsService listeSouhaitsService = new ListeDeSouhaitsService();
@@ -48,7 +47,6 @@ public class Main {
                 }
             } else {
                 System.out.println("\n===== Menu Utilisateur =====");
-                System.out.println("1. Voir mes notifications");
                 System.out.println("2. Voir mes statistiques");
                 System.out.println("3. Signaler une erreur");
                 System.out.println("4. Rechercher un jeu");
@@ -59,7 +57,6 @@ public class Main {
                 System.out.print("Choix : ");
 
                 switch (scanner.nextLine()) {
-                    case "1" -> notificationService.afficherNotifications(authController.getUtilisateurConnecte().getId());
                     case "2" -> jeuxController.afficherStatistiques(statistiquesService, listeSouhaitsService, authController.getUtilisateurConnecte());
                     case "3" -> jeuxController.signalerErreur(scanner, rapportErreurService, authController.getUtilisateurConnecte());
                     case "4" -> jeuxController.gererJeu(scanner, jeuService, userService, listeSouhaitsService, evaluationService, critiqueService,

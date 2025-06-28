@@ -7,12 +7,10 @@ import src.metier.Utilisateur;
 import src.service.CritiqueService;
 import src.service.EvaluationService;
 import src.service.JeuService;
-import src.service.NotificationService;
 
 public class UtilisateurGestionnaire implements GestionnaireJeu {
 
     private final Utilisateur utilisateur;
-    private final NotificationService notificationService = new NotificationService();
     private final CritiqueService critiqueService = new CritiqueService();
     private final EvaluationService evaluationService = new EvaluationService();
     private final JeuService jeuService = new JeuService();
@@ -70,7 +68,6 @@ public class UtilisateurGestionnaire implements GestionnaireJeu {
     public void ajouterCritique(Critique critique, String titreJeu) {
         if (critique.getUtilisateurId() == utilisateur.getId()) {
             boolean ok = critiqueService.ajouterCritiquePourJeu(critique);
-            if (ok) notificationService.notifierCritique(utilisateur.getId(), titreJeu);
             System.out.println(ok ? "Critique ajoutée." : "Erreur critique.");
         } else {
             System.out.println("Vous ne pouvez ajouter une critique que pour vous-même.");

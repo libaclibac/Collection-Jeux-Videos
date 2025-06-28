@@ -21,10 +21,6 @@ public class RapportErreur {
         this.status = status;
     }
 
-    public void changerStatus(StatusRapport nouveauStatus) {
-        this.status = nouveauStatus;
-    }
-
     // Getters
     public int getId() { return id; }
     public String getDescription() { return description; }
