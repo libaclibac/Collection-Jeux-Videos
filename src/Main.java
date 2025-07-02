@@ -2,6 +2,7 @@ package src;
 
 import src.controller.AuthentificationController;
 import src.controller.JeuxController;
+import src.metier.Statistiques;
 import src.metier.gestionnaires.BotGestionnaire;
 import src.service.*;
 
@@ -16,7 +17,6 @@ public class Main {
         AuthentificationService auth = new AuthentificationService();
         UtilisateurService userService = new UtilisateurService();
         JeuService jeuService = new JeuService();
-        StatistiquesService statistiquesService = new StatistiquesService();
         RapportErreurService rapportErreurService = new RapportErreurService();
         ListeDeSouhaitsService listeSouhaitsService = new ListeDeSouhaitsService();
         EvaluationService evaluationService = new EvaluationService();
@@ -57,7 +57,7 @@ public class Main {
                 System.out.print("Choix : ");
 
                 switch (scanner.nextLine()) {
-                    case "1" -> jeuxController.afficherStatistiques(statistiquesService, listeSouhaitsService, authController.getUtilisateurConnecte());
+                    case "1" -> jeuxController.afficherStatistiques(new Statistiques(), listeSouhaitsService, authController.getUtilisateurConnecte());
                     case "2" -> jeuxController.signalerErreur(scanner, rapportErreurService, authController.getUtilisateurConnecte());
                     case "3" -> jeuxController.gererJeu(scanner, jeuService, userService, listeSouhaitsService, evaluationService, critiqueService,
                             authController.getUtilisateurConnecte(), authController.getGestionnaire());

@@ -30,4 +30,10 @@ public class Statistiques {
                 System.out.printf("%-15s : %.2f %%\n", entry.getKey(), pourcentage);
             });
     }
+
+    public static void afficherStatistiques(Map<String, Integer> stats) {
+        System.out.println("Statistiques des genres :");
+        afficherPourcentages(stats);
+        System.out.println("Total genres : " + stats.values().stream().mapToInt(Integer::intValue).sum());
+    }
 }

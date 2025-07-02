@@ -14,7 +14,7 @@ import java.util.Scanner;
 
 public class JeuxController {
 
-    public void afficherStatistiques(StatistiquesService statistiquesService, ListeDeSouhaitsService souhaitsService, Utilisateur utilisateurConnecte) {
+    public void afficherStatistiques(Statistiques statistiquesService, ListeDeSouhaitsService souhaitsService, Utilisateur utilisateurConnecte) {
         System.out.println("\n===== Statistiques =====");
         System.out.println("Pseudo: " + utilisateurConnecte.getPseudo());
         System.out.println("Email: " + utilisateurConnecte.getEmail());
