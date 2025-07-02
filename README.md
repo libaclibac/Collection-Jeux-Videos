@@ -9,7 +9,7 @@ Ce projet Java est une application console permettant de gérer une base de donn
 - ✅ Authentification (compte, connexion) avec mot de passe hashé (SHA-256)
 - ✅ Création, modification et suppression de jeux
 - ✅ Liste de souhaits par utilisateur
-- ✅ Ajout et modification de critiques / évaluations
+- ✅ Ajout, modification et suppression de critiques / évaluations
 - ✅ Statistiques sur les genres de jeux (depuis la liste de souhaits)
 - ✅ Signalement d’erreurs (création de rapports)
 - ✅ Import automatique de jeux via fichier JSON
